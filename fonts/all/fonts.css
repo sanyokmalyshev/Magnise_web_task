@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('DroidArabicKufi-Bold.woff2') format('woff2'),
+        url('DroidArabicKufi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('DroidArabicKufi.woff2') format('woff2'),
+        url('DroidArabicKufi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Adobe Arabic';
+    src: url('AdobeArabic-Regular.woff2') format('woff2'),
+        url('AdobeArabic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Droid Arabic Naskh';
+    src: url('DroidArabicNaskh.woff2') format('woff2'),
+        url('DroidArabicNaskh.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
+}
+

@@ -1,0 +1,293 @@
+@import './mixins';
+
+$footer: #3E3E3E;
+$title: #010308;
+$backButton: #D90909;
+$text: #fff;
+$mainLink: #F3B411;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Droid Arabic Kufi';
+}
+
+.Header {
+  background-image: url('../imgs/section1.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 467px;
+  padding-top: 7px;
+
+  @include onLaptop() {
+    background-image: url('../imgs/section1_laptop.png');
+    height: 500px;
+    padding-top: 20px;
+  }
+  
+
+  @include onLaptop-768() {
+    background-image: url('../imgs/laptop_640.png');
+    height: 415px;
+    padding-top: 15px;
+  }
+
+  @include onMobile() {
+    height: 310px;
+    padding-top: 10px;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 985px;
+    display: flex;
+    justify-content: space-between;
+
+    @include onLaptop() {
+      justify-content: center;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    margin-top: 122px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+
+    @include onLaptop() {
+      margin-top: 0;
+      align-items: center;
+    }
+
+  }
+
+  &__imgCont {
+    width: 495px;
+    height: 488px;
+
+    @include onLaptop() {
+      margin-top: 32px;
+      width: 280px;
+      height: 280px;
+    }
+
+    @include onLaptop-768() {
+      margin-top: 20px;
+      width: 236px;
+      height: 236px;
+    }
+
+    @include onMobile() {
+      width: 178px;
+      height: 178px;
+      margin-top: 10px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 46px;
+    color: $title;
+
+    @include onLaptop() {
+      font-size: 33px;
+    }
+
+    @include onLaptop-768() {
+      font-size: 28px;
+    }
+
+    @include onMobile() {
+      font-size: 21px;
+    }
+  }
+
+  &__text {
+    width: 412px;
+    font-size: 21px;
+    color: $title;
+
+    @include onLaptop-768() {
+      width: 370px;
+      font-size: 18px;
+    }
+
+    @include onMobile() {
+      width: 320px;
+      font-size: 15px;
+    }
+  }
+
+  &__link {
+    margin-top: 15px;
+    width: 315px;
+    height: 40px;
+    background-color: $backButton;
+    color: $text;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: $mainLink;
+    }
+
+    @include onLaptop-768() {
+      width: 266px;
+      font-size: 18px;
+      height: 34px;
+      line-height: 34px;
+    }
+
+    @include onMobile() {
+      width: 200px; 
+      font-size: 15px;
+      height: 30px;
+      line-height: 30px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.Main {
+  background-image: url('../imgs/section2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 376px;
+  padding-top: 44px;
+
+  @include onLaptop() {
+    padding-top: 0;
+    height: 420px;
+  }
+
+  @include onLaptop-768() {
+    height: 353px;
+  }
+
+  @include onMobile() {
+    height: 307px;
+  }
+
+  &__content  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: $text;
+
+    @include onLaptop() {
+      width: 320px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    @include onLaptop-768() {
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+    color: $text;
+
+    @include onLaptop-768() {
+      font-size: 22px;
+      width: 250px;
+    }
+
+    @include onMobile() {
+      font-size: 21px;
+    }
+  }
+
+  &__link {
+    margin-top: 20px;
+    text-decoration: none;
+    width: 223px;
+    height: 41px;
+    font-size: 20px;
+    color: #000;
+    background-color: $mainLink;
+    font-weight: bold;
+    line-height: 41px;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: $backButton;
+      color: #fff;
+    }
+
+    @include onLaptop() {
+      width: 100%;
+    }
+
+    @include onLaptop-768() {
+      width: 266px;
+      font-size: 18px;
+      height: 34px;
+      line-height: 34px;
+    }
+
+    @include onMobile() {
+      width: 200px;
+      font-size: 16px;
+      height: 30px;
+      line-height: 30px;
+      margin-top: 10px;
+    }
+  }
+
+  &__listTitle {
+    font-weight: bold;
+    font-size: 21px;
+    margin-top: 20px;
+
+    @include onLaptop-768() {
+      font-size: 18px;
+    }
+
+    @include onMobile() {
+      font-size: 16px;
+    }  
+  }
+
+  &__list {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__listText {
+    font-family: 'Droid Arabic Naskh';
+    font-size: 20px;
+
+    @include onLaptop-768() {
+      font-size: 16px;
+    }
+
+    @include onMobile() {
+      font-size: 14px;
+    } 
+  }
+}
+
+.Footer {
+  background-color: $footer;
+  height: 176px;
+}
